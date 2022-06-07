@@ -2,22 +2,39 @@
 
 ### Installation
 
-TBD
+#### Install the package
 
-### Rules requiring type checking
-
-Reference your _tsconfig.json_ in `"project"` to enable rules which require type
-checking.
-
-```json
-{
-  "root": true,
-  "parserOptions": {
-    "project": "./tsconfig.json"
-  },
-  "extends": ["@edgeandnode"]
-}
 ```
+npm i @edgeandnode/eslint-config
+```
+
+#### Use the preset in your _.eslintrc.js_ file.
+
+```js
+// .eslintrc.js
+module.exports = {
+  parser: "@typescript-eslint/parser",
+  extends: ["@edgeandnode", "@edgeandnode/eslint-config/next"],
+  plugins: ["testing-library"],
+  rules: {
+    "testing-library/no-unnecessary-act": ["error", { isStrict: true }],
+  },
+  overrides: [
+    {
+      files: ["*.ts", "*.tsx"],
+      parserOptions: {
+        project: require.resolve("./tsconfig.json"),
+      },
+    },
+  ],
+};
+```
+
+#### Presets
+
+- **@edgeandnode/eslint-config** — base profile built with _eslint-plugin-jsx-a11y_, _eslint-plugin-react_, _eslint-plugin-react-hooks_, _eslint-plugin-simple-import-sort_, _eslint-plugin-sonarjs_, and _eslint-plugin-simple-import-sort_
+
+- **@edgeandnode/eslint-config-next** — profile for Next.js built with _@next/eslint-config-next_
 
 ## Development
 
