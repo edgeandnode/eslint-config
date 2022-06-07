@@ -1,7 +1,7 @@
 {
   "name": "@edgeandnode/eslint-config",
   "description": "ESLint configuration used in Edge & Node products",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "main": "dist/index.js",
   "license": "MIT",
   "publishConfig": {

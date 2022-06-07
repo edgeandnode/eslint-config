@@ -34,7 +34,7 @@ module.exports = {
 
 - **@edgeandnode/eslint-config** — base profile built with _eslint-plugin-jsx-a11y_, _eslint-plugin-react_, _eslint-plugin-react-hooks_, _eslint-plugin-simple-import-sort_, _eslint-plugin-sonarjs_, and _eslint-plugin-simple-import-sort_
 
-- **@edgeandnode/eslint-config-next** — profile for Next.js built with _@next/eslint-config-next_
+- **@edgeandnode/eslint-config/next** — profile for Next.js built with _@next/eslint-config-next_
 
 ## Development
 
