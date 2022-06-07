@@ -5,7 +5,7 @@
 #### Install the package
 
 ```
-npm i @edgeandnode/eslint-config
+pnpm add --save-dev @edgeandnode/eslint-config
 ```
 
 #### Use the preset in your _.eslintrc.js_ file.

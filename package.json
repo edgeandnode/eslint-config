@@ -15,7 +15,8 @@
   "scripts": {
     "build": "tsc",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint --ext .ts src"
+    "lint": "eslint --ext .ts src",
+    "ci": "pnpm lint && pnpm typecheck"
   },
   "dependencies": {
     "@next/eslint-plugin-next": "12.1.7-canary.30",
