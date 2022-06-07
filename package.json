@@ -12,6 +12,10 @@
     "./next": "./dist/next.js",
     "./create-config": "./dist/createEslintConfig.js"
   },
+  "files": [
+    "dist",
+    "next.js"
+  ],
   "scripts": {
     "build": "tsc",
     "typecheck": "tsc --noEmit",
