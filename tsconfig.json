@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "lib": ["ES2022"],
+    "module": "CommonJS",
+    "allowJs": true,
+    "checkJs": true,
+    "strict": true,
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "skipLibCheck": true
+  },
+  "include": ["./src", "./src/**.test.ts"],
+  "exclude": ["./node_modules"]
+}
