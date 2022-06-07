@@ -1,7 +1,7 @@
 module.exports = {
   extends: ["./dist"],
   parserOptions: {
-    project: require.resolve("./tsconfig.json"),
+    project: require.resolve("./tsconfig.eslint.json"),
   },
   ignorePatterns: ["!**/*"],
 };
