@@ -4,6 +4,9 @@
   "version": "1.0.0-alpha.0",
   "main": "dist/index.js",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
     ".": "./dist/index.js",
     "./next": "./dist/next.js",
