@@ -82,7 +82,11 @@ export const typescriptEslintRules: Linter.RulesRecord = {
   "@typescript-eslint/no-explicit-any": "off",
   "@typescript-eslint/no-extra-non-null-assertion": "error",
   "no-extra-semi": "off",
-  "@typescript-eslint/no-extra-semi": "error",
+  /**
+   * @changed to "off"
+   * @motivation This is definitely Prettier's domain.
+   */
+  "@typescript-eslint/no-extra-semi": "off",
   "@typescript-eslint/no-inferrable-types": "error",
   "@typescript-eslint/no-misused-new": "error",
   "@typescript-eslint/no-non-null-asserted-optional-chain": "error",
