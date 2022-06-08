@@ -14,19 +14,36 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v2
+
       - uses: pnpm/action-setup@v2
         with:
           version: 7
+
       - uses: actions/setup-node@v2
         with:
           node-version: "17"
           cache: "pnpm"
+
       - name: Install
         run: pnpm install
+
       - name: Build
         run: pnpm build
+
       - name: Lint and Typecheck
         run: pnpm ci
         env:
           CI: true
           INFURA_KEY: "empty"
+
+      - name: Publish to NPM
+        if: ${{ github.ref == 'refs/heads/main' }}
+        id: publish
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          check-version: true
+
+      - if: steps.publish.outputs.type != 'none'
+        run: |
+          echo "Version changed: ${{ steps.publish.outputs.old-version }} => ${{ steps.publish.outputs.version }}"
