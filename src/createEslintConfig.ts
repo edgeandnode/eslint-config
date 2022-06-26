@@ -36,7 +36,6 @@ export const createEslintConfig = ({
   rules: {
     ...nativeEslintRules,
     ...typescriptEslintRules,
-    ...typecheckedRules[useRulesRequiringTypechecking ? "on" : "off"],
     ...sonarjsRules,
     ...simpleImportSortRules(ownPackageScope),
   },
@@ -44,6 +43,12 @@ export const createEslintConfig = ({
     {
       files: ["*.md"],
       plugins: ["markdown"],
+    },
+    {
+      files: ["*.ts", "*.tsx", "*.mts", "*.mtsx", "*.cts", "*.ctsx"],
+      rules: {
+        ...typecheckedRules[useRulesRequiringTypechecking ? "on" : "off"],
+      },
     },
     {
       files: ["*.tsx"],
@@ -70,11 +75,7 @@ export const createEslintConfig = ({
     {
       // these will usually be scripts or workspace utility code
       parserOptions: { project: null },
-      files: ["*.js"],
-      rules: {
-        ...typecheckedRules.off,
-        "@typescript-eslint/no-var-requires": "off",
-      },
+      files: ["*.js", "*.cjs", "*.mjs"],
     },
   ],
 });
