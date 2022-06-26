@@ -20,7 +20,8 @@
     "build": "tsc",
     "typecheck": "tsc --noEmit",
     "lint": "eslint --ext .ts src",
-    "ci": "pnpm lint && pnpm typecheck"
+    "ci": "pnpm lint && pnpm typecheck",
+    "release": "pnpm build && pnpm publish"
   },
   "dependencies": {
     "@next/eslint-plugin-next": "12.1.7-canary.30",
