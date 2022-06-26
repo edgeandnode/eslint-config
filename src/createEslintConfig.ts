@@ -51,6 +51,12 @@ export const createEslintConfig = ({
       },
     },
     {
+      files: ["*.cts", "*.ctsx", "*.cjs", ".js", ".jsx"],
+      rules: {
+        "@typescript-eslint/no-var-requires": "off",
+      },
+    },
+    {
       files: ["*.tsx"],
       settings: {
         react: { version: "detect" },
