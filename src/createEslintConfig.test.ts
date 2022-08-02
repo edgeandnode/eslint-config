@@ -11,3 +11,16 @@ createEslintConfig({
 
 // @ts-expect-error Argument of type '{}' is not assignable to parameter of type '{ ownPackageScope: string; }'.
 createEslintConfig({});
+
+// -----------------------------------------------------------------------------
+
+// eslint-disable-next-line no-lone-blocks
+{
+  // https://devblogs.microsoft.com/typescript/announcing-typescript-4-7/#optional-variance-annotations-for-type-parameters
+  type F<in out T> = (x: T) => T;
+}
+
+{
+  const f = <T>(x: T) => x;
+  type FNumber = typeof f<number>
+}
