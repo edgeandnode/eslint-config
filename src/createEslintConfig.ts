@@ -8,7 +8,6 @@ import { simpleImportSortRules } from "./rules/simpleImportSortRules";
 import { sonarjsRules } from "./rules/sonarjsRules";
 import { typecheckedRules } from "./rules/typecheckedRules";
 import { typescriptEslintRules } from "./rules/typescriptEslintRules";
-import { patchModuleResolution } from "./patchModuleResolution";
 
 export interface CreateConfigOptions {
   ownPackageScope: string;

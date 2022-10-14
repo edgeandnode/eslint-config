@@ -11,7 +11,7 @@ const rules: Linter.RulesRecord = {
   "@typescript-eslint/no-misused-promises": "error",
   /**
    * @changed from error to warn
-   * @motivation It's a redundancy, but not a 
+   * @motivation It's a redundancy, but not a bug.
    */
   "@typescript-eslint/no-unnecessary-type-assertion": "warn",
 
@@ -56,6 +56,20 @@ const rules: Linter.RulesRecord = {
     },
   ],
   "@typescript-eslint/no-useless-constructor": "warn",
+
+  // #region "@typescript-eslint/strict"
+  // https://typescript-eslint.io/rules/
+
+  "@typescript-eslint/no-base-to-string": "warn",
+  "@typescript-eslint/no-unnecessary-boolean-literal-compare": "warn",
+  "@typescript-eslint/no-unnecessary-condition": "warn",
+  "@typescript-eslint/no-unnecessary-type-arguments": "warn",
+  "@typescript-eslint/non-nullable-type-assertion-style": "warn",
+  "@typescript-eslint/prefer-includes": "warn",
+  "@typescript-eslint/prefer-return-this-type": "warn",
+  "@typescript-eslint/prefer-string-starts-ends-with": "warn",
+
+  // #endregion
 };
 
 /**
