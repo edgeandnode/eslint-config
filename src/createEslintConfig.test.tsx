@@ -1,3 +1,5 @@
+/** @jsxImportSource react */
+
 import { createEslintConfig } from "./createEslintConfig";
 
 createEslintConfig({
@@ -21,6 +23,21 @@ createEslintConfig({});
 }
 
 {
-  const f = <T>(x: T) => x;
-  type FNumber = typeof f<number>
+  const f = <T,>(x: T) => x;
+  type FNumber = typeof f<number>;
+}
+
+{
+  function Component() {
+    // eslint-disable-next-line react/no-unstable-nested-components
+    function UnstableNestedComponent() {
+      return <div />;
+    }
+
+    return (
+      <div>
+        <UnstableNestedComponent />
+      </div>
+    );
+  }
 }
