@@ -1,7 +1,7 @@
 {
   "name": "@edgeandnode/eslint-config",
   "description": "ESLint configuration used in Edge & Node products",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "main": "dist/index.js",
   "license": "MIT",
   "publishConfig": {
@@ -19,7 +19,7 @@
   "scripts": {
     "build": "tsc",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint --ext .ts,.tsx src",
+    "lint": "eslint --ext .ts,.tsx src --max-warnings 0",
     "ci": "pnpm lint && pnpm typecheck",
     "release": "pnpm build && pnpm publish"
   },

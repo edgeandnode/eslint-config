@@ -1,4 +1,5 @@
 /** @jsxImportSource react */
+/* eslint-disable no-lone-blocks */
 
 import { createEslintConfig } from "./createEslintConfig";
 
@@ -16,7 +17,6 @@ createEslintConfig({});
 
 // -----------------------------------------------------------------------------
 
-// eslint-disable-next-line no-lone-blocks
 {
   // https://devblogs.microsoft.com/typescript/announcing-typescript-4-7/#optional-variance-annotations-for-type-parameters
   type F<in out T> = (x: T) => T;
@@ -25,6 +25,14 @@ createEslintConfig({});
 {
   const f = <T,>(x: T) => x;
   type FNumber = typeof f<number>;
+}
+
+{
+  const x = 2;
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+  if (1 < x) {
+    console.log("1 < 2");
+  }
 }
 
 {
