@@ -1,4 +1,6 @@
+/** @jsxImportSource react */
 /* eslint-disable no-lone-blocks */
+
 import { createEslintConfig } from "./createEslintConfig";
 
 createEslintConfig({
@@ -21,7 +23,7 @@ createEslintConfig({});
 }
 
 {
-  const f = <T>(x: T) => x;
+  const f = <T,>(x: T) => x;
   type FNumber = typeof f<number>;
 }
 
@@ -29,5 +31,21 @@ createEslintConfig({});
   const x = 2;
   // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
   if (1 < x) {
+    console.log("1 < 2");
+  }
+}
+
+{
+  function Component() {
+    // eslint-disable-next-line react/no-unstable-nested-components
+    function UnstableNestedComponent() {
+      return <div />;
+    }
+
+    return (
+      <div>
+        <UnstableNestedComponent />
+      </div>
+    );
   }
 }
