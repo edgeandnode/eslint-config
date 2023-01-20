@@ -58,7 +58,7 @@ export const createEslintConfig = ({
     {
       files: ["*.tsx"],
       settings: {
-        react: { version: "detect" },
+        react: { version: "99.99.99" /* eternal */ },
       },
       plugins: ["jsx-a11y", "react", "react-hooks"],
       rules: {
