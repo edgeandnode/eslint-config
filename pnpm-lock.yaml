@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@hasparus/eslint-plugin': ^1.0.0
   '@next/eslint-plugin-next': 13.2.3
   '@rushstack/eslint-patch': ^1.2.0
   '@types/eslint': ^8.21.1
@@ -20,6 +21,7 @@ specifiers:
   typescript: ^4.9.5
 
 dependencies:
+  '@hasparus/eslint-plugin': 1.0.0
   '@next/eslint-plugin-next': 13.2.3
   '@rushstack/eslint-patch': 1.2.0
   '@typescript-eslint/eslint-plugin': 5.54.0_6mj2wypvdnknez7kws2nfdgupi
@@ -68,6 +70,12 @@ packages:
   /@eslint/js/8.35.0:
     resolution: {integrity: sha512-JXdzbRiWclLVoD8sNUjR443VVlYqiYmDVT6rGUEIEHU5YJW0gaVZwV2xgM7D4arkvASqD0IlLUVjHiFuxaftRw==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+
+  /@hasparus/eslint-plugin/1.0.0:
+    resolution: {integrity: sha512-Pef5tKZVNdMxkbO5RJE9KFzdN/vgMOAcZLd9gfmXZa1Th+zKMh8N+JP0p9+oVTeSH1n7MaFmuW23tBJTjzqL0w==}
+    dependencies:
+      typescript: 5.0.2
+    dev: false
 
   /@humanwhocodes/config-array/0.11.8:
     resolution: {integrity: sha512-UybHIJzJnR5Qc/MsD9Kr+RpO2h+/P1GhOwdiLPXK5TWk5sgTdu88bTD9UP+CKbPPh5Rni1u0GjAdYQLemG8g+g==}
@@ -1879,6 +1887,12 @@ packages:
     resolution: {integrity: sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==}
     engines: {node: '>=4.2.0'}
     hasBin: true
+
+  /typescript/5.0.2:
+    resolution: {integrity: sha512-wVORMBGO/FAs/++blGNeAVdbNKtIh1rbBL2EyQ1+J9lClJ93KiiKe8PmFIVdXhHcyv44SL9oglmfeSsndo0jRw==}
+    engines: {node: '>=12.20'}
+    hasBin: true
+    dev: false
 
   /unbox-primitive/1.0.2:
     resolution: {integrity: sha512-61pPlCD9h51VoreyJ0BReideM3MDKMKnh6+V9L08331ipq6Q8OFXZYiqP6n/tbHx4s5I9uRhcye6BrbkizkBDw==}
