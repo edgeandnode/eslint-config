@@ -31,7 +31,13 @@ export const createEslintConfig = ({
   },
   // leave this empty, and add rules one by one to `rules` dictionary
   extends: [],
-  plugins: ["@typescript-eslint", "import", "simple-import-sort", "sonarjs"],
+  plugins: [
+    "@typescript-eslint",
+    "import",
+    "simple-import-sort",
+    "sonarjs",
+    "@hasparus",
+  ],
   rules: {
     ...nativeEslintRules,
     ...typescriptEslintRules,

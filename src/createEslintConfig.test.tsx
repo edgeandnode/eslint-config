@@ -49,3 +49,8 @@ createEslintConfig({});
     );
   }
 }
+
+{
+  // eslint-disable-next-line @hasparus/inlined-env
+  const { NODE_ENV } = process.env;
+}
