@@ -32,7 +32,7 @@ jobs:
         run: pnpm build
 
       - name: Lint and Typecheck
-        run: pnpm ci
+        run: pnpm check
         env:
           CI: true
 
