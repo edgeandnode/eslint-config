@@ -54,3 +54,11 @@ createEslintConfig({});
   // eslint-disable-next-line @hasparus/inlined-env
   const { NODE_ENV } = process.env;
 }
+
+{
+  // We just make sure that this is getting parsed.
+  const includes = <const T extends readonly unknown[]>(
+    array: T,
+    item: unknown
+  ): item is T[number] => array.includes(item as T);
+}
