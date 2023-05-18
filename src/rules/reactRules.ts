@@ -22,7 +22,7 @@ export const reactRules: Linter.RulesRecord = {
   "react/no-danger-with-children": "warn",
   "react/style-prop-object": "warn",
   "react/no-is-mounted": "warn",
-  "react/no-unstable-nested-components": "warn",
+  "react/no-unstable-nested-components": ["warn", { allowAsProps: true }],
 
   "react/no-direct-mutation-state": "off",
   "react/react-in-jsx-scope": "off",
