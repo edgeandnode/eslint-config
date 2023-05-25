@@ -1,5 +1,6 @@
 /** @jsxImportSource react */
 /* eslint-disable no-lone-blocks */
+import type * as React from "react";
 
 import { createEslintConfig } from "./createEslintConfig";
 
@@ -38,13 +39,19 @@ createEslintConfig({});
 {
   function Component() {
     // eslint-disable-next-line react/no-unstable-nested-components
-    function UnstableNestedComponent() {
-      return <div />;
+    function UnstableNestedComponent({
+      render,
+    }: {
+      render?: (props: { children: React.ReactNode }) => React.JSX.Element;
+    }) {
+      return <div>{render?.({ children: <span /> })}</div>;
     }
 
     return (
       <div>
-        <UnstableNestedComponent />
+        <UnstableNestedComponent
+          render={({ children }) => <div>{children}</div>}
+        />
       </div>
     );
   }
