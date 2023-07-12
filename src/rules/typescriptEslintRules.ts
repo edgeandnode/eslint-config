@@ -148,4 +148,39 @@ export const typescriptEslintRules: Linter.RulesRecord = {
   "prefer-const": "error",
   // TypeScript transpiles `let/const` to `var` if you need it
   "no-var": "error",
+
+  // choose based on the vibe
+  "@typescript-eslint/array-type": "off",
+
+  // we never used tslint
+  "@typescript-eslint/ban-tslint-comment": "off",
+
+  "@typescript-eslint/no-confusing-void-expression": [
+    "warn",
+    {
+      ignoreArrowShorthand: true,
+      ignoreVoidOperator: true,
+    },
+  ],
+
+  "@typescript-eslint/no-duplicate-enum-values": ["error"],
+  "@typescript-eslint/no-duplicate-type-constituents": ["error"],
+  "@typescript-eslint/no-dynamic-delete": ["error"],
+  "@typescript-eslint/no-extraneous-class": ["error"],
+  "@typescript-eslint/no-invalid-void-type": ["error"],
+  "@typescript-eslint/no-loss-of-precision": ["error"],
+  "@typescript-eslint/no-meaningless-void-operator": ["error"],
+  "@typescript-eslint/no-mixed-enums": ["error"],
+  "@typescript-eslint/no-non-null-asserted-nullish-coalescing": ["error"],
+  "@typescript-eslint/no-redundant-type-constituents": ["error"],
+  "@typescript-eslint/no-throw-literal": ["error"],
+  "@typescript-eslint/no-unnecessary-type-constraint": ["error"],
+  "@typescript-eslint/no-unsafe-argument": ["error"],
+  "@typescript-eslint/no-unsafe-declaration-merging": ["error"],
+  "@typescript-eslint/no-unsafe-enum-comparison": ["error"],
+
+  "@typescript-eslint/prefer-literal-enum-member": ["warn"],
+  "@typescript-eslint/prefer-reduce-type-parameter": ["warn"],
+  "@typescript-eslint/prefer-ts-expect-error": ["warn"],
+  "@typescript-eslint/unified-signatures": ["warn"],
 };

@@ -29,8 +29,6 @@ export const createEslintConfig = ({
       "@typescript-eslint/parser": [".ts", ".tsx", ".d.ts"],
     },
   },
-  // leave this empty, and add rules one by one to `rules` dictionary
-  extends: [],
   plugins: [
     "@typescript-eslint",
     "import",
@@ -38,6 +36,17 @@ export const createEslintConfig = ({
     "sonarjs",
     "@hasparus",
   ],
+  // Use scripts/diff-rules to learn about new rules released
+  // then optionally add them to `typescriptEslintRules` object.
+  extends: useRulesRequiringTypechecking
+    ? [
+        "plugin:@typescript-eslint/recommended-type-checked",
+        "plugin:@typescript-eslint/strict-type-checked",
+      ]
+    : [
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/strict",
+      ],
   rules: {
     ...nativeEslintRules,
     ...typescriptEslintRules,

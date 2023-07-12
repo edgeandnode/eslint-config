@@ -20,7 +20,6 @@ export function simpleImportSortRules(
       {
         groups: [
           // Node.js builtins.
-          // @ts-ignore `builtinModules` should be defined :o
           [`^(${builtinModules.join("|")})(/|$)`],
           // Packages. `react` related packages come first.
           ["^@?\\w"],
