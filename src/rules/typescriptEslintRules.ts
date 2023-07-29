@@ -1,5 +1,7 @@
 import type { Linter } from "eslint";
 
+// Use scripts/diff-rules to learn about new rules released
+// then optionally add them to this object.
 export const typescriptEslintRules: Linter.RulesRecord = {
   // based on `@typescript-eslint/recommended` config
   "@typescript-eslint/adjacent-overload-signatures": "error",

@@ -36,20 +36,8 @@ export const createEslintConfig = ({
     "sonarjs",
     "@hasparus",
   ],
-  // Use scripts/diff-rules to learn about new rules released
-  // then optionally add them to `typescriptEslintRules` object.
-  extends: useRulesRequiringTypechecking
-    ? [
-        "plugin:@typescript-eslint/recommended-type-checked",
-        "plugin:@typescript-eslint/strict-type-checked",
-      ]
-    : [
-        "plugin:@typescript-eslint/recommended",
-        "plugin:@typescript-eslint/strict",
-      ],
   rules: {
     ...nativeEslintRules,
-    ...typescriptEslintRules,
     ...sonarjsRules,
     ...simpleImportSortRules(ownPackageScope),
   },
@@ -60,7 +48,17 @@ export const createEslintConfig = ({
     },
     {
       files: ["*.ts", "*.tsx", "*.mts", "*.mtsx", "*.cts", "*.ctsx"],
+      extends: useRulesRequiringTypechecking
+        ? [
+            "plugin:@typescript-eslint/recommended-type-checked",
+            "plugin:@typescript-eslint/strict-type-checked",
+          ]
+        : [
+            "plugin:@typescript-eslint/recommended",
+            "plugin:@typescript-eslint/strict",
+          ],
       rules: {
+        ...typescriptEslintRules,
         ...typecheckedRules[useRulesRequiringTypechecking ? "on" : "off"],
       },
     },

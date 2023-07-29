@@ -1,4 +1,6 @@
-# generated during publish
-yarn.lock
+.DS_Store
 node_modules
 dist
+
+# generated during publish
+yarn.lock
