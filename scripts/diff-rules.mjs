@@ -38,9 +38,18 @@ function diff() {
   console.log("Old rules:", Object.keys(oldRules).length);
   console.log("New rules:", Object.keys(newRules).length);
 
-  for (const [key] of Object.entries(oldRules)) {
-    delete newRules[key];
-  }
+  const oldKeys = Object.keys(oldRules);
+  const newKeys = Object.keys(newRules);
 
-  return JSON.stringify(newRules, null, 2);
+  const added = newKeys.filter((key) => !oldKeys.includes(key));
+  const removed = oldKeys.filter((key) => !newKeys.includes(key));
+
+  return JSON.stringify(
+    {
+      added,
+      removed,
+    },
+    null,
+    2
+  );
 }

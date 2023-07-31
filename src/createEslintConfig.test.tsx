@@ -63,6 +63,13 @@ createEslintConfig({});
 }
 
 {
+  const r = (payload: unknown): void => {};
+  async function f() {
+    return r({});
+  }
+}
+
+{
   // We just make sure that this is getting parsed.
   const includes = <const T extends readonly unknown[]>(
     array: T,

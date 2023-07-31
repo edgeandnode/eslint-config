@@ -155,13 +155,7 @@ export const typescriptEslintRules: Linter.RulesRecord = {
   // we never used tslint
   "@typescript-eslint/ban-tslint-comment": "off",
 
-  "@typescript-eslint/no-confusing-void-expression": [
-    "warn",
-    {
-      ignoreArrowShorthand: true,
-      ignoreVoidOperator: true,
-    },
-  ],
+  "@typescript-eslint/no-confusing-void-expression": "off",
 
   "@typescript-eslint/no-duplicate-enum-values": ["error"],
   "@typescript-eslint/no-duplicate-type-constituents": ["error"],
