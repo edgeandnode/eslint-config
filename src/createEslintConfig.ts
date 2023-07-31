@@ -6,8 +6,10 @@ import { reactHooksRules } from "./rules/reactHooksRules";
 import { reactRules } from "./rules/reactRules";
 import { simpleImportSortRules } from "./rules/simpleImportSortRules";
 import { sonarjsRules } from "./rules/sonarjsRules";
-import { typecheckedRules } from "./rules/typecheckedRules";
-import { typescriptEslintRules } from "./rules/typescriptEslintRules";
+import {
+  typecheckedRules,
+  typescriptEslintRules,
+} from "./rules/typescriptEslintRules";
 
 export interface CreateConfigOptions {
   ownPackageScope: string;
