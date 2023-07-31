@@ -147,7 +147,7 @@ export const typescriptEslintRules: Linter.RulesRecord = {
   // TypeScript transpiles spread to apply, so no need for manual apply
   "prefer-spread": "error",
   // TypeScript provides better types with `const`
-  "prefer-const": "error",
+  "prefer-const": "warn",
   // TypeScript transpiles `let/const` to `var` if you need it
   "no-var": "error",
 

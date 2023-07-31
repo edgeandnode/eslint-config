@@ -19,7 +19,7 @@
   "scripts": {
     "build": "tsc",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint --ext .ts,.tsx src --max-warnings 0",
+    "lint": "eslint --ext .ts,.tsx,.js src --max-warnings 0",
     "check": "pnpm lint && pnpm typecheck",
     "release": "pnpm build && pnpm publish"
   },
