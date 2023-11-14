@@ -148,8 +148,13 @@ export const typescriptEslintRules: Linter.RulesRecord = {
   "prefer-spread": "error",
   // TypeScript provides better types with `const`
   "prefer-const": "warn",
-  // TypeScript transpiles `let/const` to `var` if you need it
-  "no-var": "error",
+  /**
+   * @changed
+   * @motivation False positive inside `declare global` in TypeScript.
+   * There's no chance anybody will write `var` instead of `let/const`
+   * by accident in 2023/2024.
+   */
+  "no-var": "off",
 
   // choose based on the vibe
   "@typescript-eslint/array-type": "off",
